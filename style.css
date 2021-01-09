@@ -1,0 +1,743 @@
+/* Estilos de fuentes */
+
+@font-face {
+  font-family: "Gotham Black";
+  src: url("fonts/Gotham-Black.otf");
+}
+
+@font-face {
+  font-family: "Gotham Bold";
+  src: url(fonts/Gotham-Bold.otf);
+}
+
+@font-face {
+  font-family: "Gotham Medium";
+  src: url(fonts/GothamMedium.ttf);
+}
+
+
+@font-face {
+  font-family: "Gotham Regular";
+  src: url(fonts/GothamBook.ttf);
+}
+
+
+
+h1 {
+  font-family: 'Gotham Black';
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Gotham Bold';
+}
+
+p, li {
+  font-family: 'Gotham Regular';
+}
+
+strong {
+  font-family: 'Gotham Bold';
+}
+
+a {
+  font-family: 'Gotham Medium';
+  text-decoration: none;
+}
+
+
+/* Estilos body y container */
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+section {
+  width: 100vw;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilos del menu principal */
+
+.menu-principal {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: calc(18px*7);
+  background: none;
+  transition: all 0.5s ease-in-out;
+  z-index: 100;
+}
+
+
+.menu-principal.scroll {
+  height: calc(18px*4);
+  background: white;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.02);
+}
+
+.menu-principal > .container {
+  height: 100%;
+  display: grid;
+  grid-template-areas: "logo botones";
+  grid-template-columns: 255px 1fr;
+  grid-template-rows: 100%;
+}
+
+.menu-principal .logo-menu {
+  grid-area: logo;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu-principal .logo-menu img {
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-principal.scroll .logo-menu img {
+  transform: scale(0.6);
+}
+
+.menu-principal .botones-menu {
+  grid-area: botones;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.menu-principal .botones-menu ul {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0.5em;
+}
+
+.menu-principal .botones-menu li:not(:last-child) {
+  margin-right: 2em;
+}
+
+.menu-principal .botones-menu a {
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 0.5em;
+  transition: all 0.5s ease-in-out;
+  font-family: 'Gotham Bold';
+}
+
+.menu-principal.scroll .botones-menu a {
+  color: #719b15;
+}
+
+.boton-menu-mobile {
+  display: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 58px;
+}
+
+.menu-principal.scroll .boton-menu-mobile {
+  color: #719b15;
+}
+
+
+
+/* Estilos del slider */
+
+
+.slider {
+  width: 100vw;
+  height: calc(100vh + 66px);
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.slider > .container-full {
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 100vw);
+}
+
+.slider > div > div {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.servicios-slider {
+  background: url(img/servicios-petroleros.jpg);
+}
+
+.obras-slider {
+  background: url(img/obras-civiles.jpg);
+}
+
+.saneamiento-slider {
+  background: url(img/saneamiento-ambiental.jpg);
+}
+
+.mantenimiento-slider {
+  background: url(img/mantenimiento-lineas.jpg);
+}
+
+.conexionado-slider {
+  background: url(img/conexionado-pozos.jpg);
+}
+
+.operacion-slider {
+  background: url(img/operacion-taladros.jpg);
+}
+
+
+.slider > div > div > .content > .margen-menu {
+  width: 100%;
+  height: calc(18px*7);
+}
+
+.slider > div > div > .content {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  box-shadow: inset 1px 1px 180px #000000;
+}
+
+.slider .container {
+  height: calc(100% - 128px);
+  display: flex;
+  align-content: center;
+}
+
+.slider .text-content {
+  width: 500px;
+  padding-bottom: 100px;
+  height: auto;
+  align-self: center;
+}
+
+.slider h1 {
+  color: #ffffff;
+  font-size: 44px;
+  letter-spacing: 1px;
+  line-height: 1.2em;
+  text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilos de la descripcion */
+
+section.descripcion {
+  position: static;
+  z-index: -1;
+  background: #719b15;
+  margin-top: -66px;
+  padding-bottom: 100px;
+}
+
+.titulo-descripcion {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  width: 75%;
+  background: #ffffff;
+  color: #719b15;
+  font-size: 44px;
+  padding: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
+  -moz-box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
+  box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
+}
+
+.contenido-descripcion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 80px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.parrafo-descripcion p {
+  display: flex;
+  line-height: 1.15em;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+section.descripcion img {
+  width: 100%;
+}
+
+.parrafo-servicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.parrafo-servicios ul {
+  list-style: disc inside;
+}
+
+.parrafo-servicios li {
+  margin-bottom: 1.5em;
+}
+
+
+.parrafo-servicios h2 {
+  font-size: 28px;
+  margin-bottom: 2em;
+  text-transform: uppercase;
+}
+
+
+.parrafo-servicios li p {
+  display: inline;
+  font-family: 'Gotham Medium';
+  line-height: 1.5em;
+}
+
+/* Estilos de Mision y Vision */
+
+.mision-vision {
+  padding: 100px 0;
+}
+
+.mision-vision h2 {
+  color: #719b15;
+  font-size: 44px;
+  margin-bottom: 0.75em;
+}
+
+.mision-vision p {
+  line-height: 1.5em;
+  font-size: 20px;
+}
+
+.mision-vision .mision ul {
+  list-style: disc inside;
+}
+
+.mision-vision li p {
+  display: inline;
+}
+
+.mision-vision .mision li {
+  margin-bottom: 2.25em;
+}
+
+.mision-vision .vision p {
+  text-indent: 3em;
+}
+
+.mision-vision .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 80px;
+}
+
+/* Estilos de Obras */
+
+section.obras {
+  padding: 100px 0;
+  background: #e2e2e2;
+}
+
+section.obras .container {
+  overflow-x: hidden;
+}
+
+.obras .slider-obras {
+  display: flex;
+  width: 300%;
+  flex-direction: row;
+  grid-gap: 45px;
+}
+
+section.obras ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 270px);
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+.obras .titulo-obras {
+  color: #719b15;
+  font-size: 44px;
+  margin-bottom: 0.75em;
+  text-align: center;
+}
+
+.obras li {
+  position: relative;
+  padding: 1.25em;
+}
+
+.obras h2 {
+  position: sticky;
+  z-index: 2;
+  margin: 0.5em 0;
+  font-size: 20px;
+  color: #719b15;
+}
+
+.obras p {
+  position: sticky;
+  z-index: 2;
+  line-height: 1.5em;
+}
+
+.obras li:after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px - 45px);
+  border: 3px solid #719b15;
+  border-radius: 10px;
+}
+
+.obras span {
+  z-index: 2;
+  position: sticky;
+  color: #719b15;
+  background: #e2e2e2;
+  padding: 0px 0.25em;
+  font-size: 50px;
+}
+
+.botones {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.botones .boton {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 3px solid #719b15;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.botones .boton:not(:last-child) {
+  margin-right: 15px;
+}
+
+.botones .boton.active {
+  background: #719b15;
+}
+
+/* Estilos de Sedes */
+
+section.junta {
+  padding: 100px 0
+}
+
+.junta .titulo-junta {
+  font-size: 44px;
+  color: #719b15;
+  margin-bottom: 0.75em;
+  text-align: center;
+}
+
+.sedes {
+  display: grid;
+  grid-template-areas: "venezuela venezuela"
+                       "usa spain"
+                       "turquia rusia";
+  grid-gap: 50px;
+}
+
+.sede.venezuela {
+  grid-area: venezuela;
+}
+
+.sede.usa {
+  grid-area: usa;
+}
+
+.sede.spain {
+  grid-area: spain;
+}
+
+.sede.turquia {
+  grid-area: turquia;
+}
+
+.sede.rusia {
+  grid-area: rusia;
+}
+
+.sede {
+  position: relative;
+  padding: 1.25em;
+  display: grid;
+  grid-template-areas: "bandera titulo"
+                       "datos datos";
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 50px 1fr;
+}
+
+
+.sede:after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px - 45px);
+  border: 3px solid #719b15;
+  border-radius: 10px;
+}
+
+.sede .bandera {
+  grid-area: bandera;
+  width: 50px;
+  position: sticky;
+  background: #ffffff;
+  padding: 0 15px;
+}
+
+.sede .titulo {
+  grid-area: titulo;
+  display: flex;
+  align-items: center;
+}
+
+.sede h2 {
+  font-size: 25px;
+  color: #719b15;
+  position: sticky;
+  padding-right: 15px;
+  background: #ffffff;
+}
+
+.sede span {
+  color: #719b15;
+}
+
+.sede ul {
+  grid-area: datos;
+  margin-top: 0.75em;
+  line-height: 2em;
+}
+
+.sede strong {
+  color: #719b15;
+}
+
+/* Estilos de Contacto */
+
+section.contacto {
+  padding-bottom: 100px;
+}
+
+.contacto h2 {
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 0.75em;
+  color: #719b15;
+}
+
+.formulario-bienvenidos .importante {
+  margin-top: 1em;
+  font-size: 14px;
+  margin-bottom: 2em;
+}
+
+.input-form {
+  width: calc(100% - 44px);
+  padding: 20px;
+  margin-bottom: 25px;
+  background: transparent;
+  border: 2px solid #719b15;
+  font-family: 'Gotham Regular', sans-serif;
+  font-size: 18px;
+}
+
+
+textarea {
+  resize: none;
+}
+
+.submit-form {
+  width: 100%;
+  font-family: 'Gotham Bold';
+  margin-bottom: 1em;
+  color: #ffffff;
+  background: #719b15;
+  font-size: 18px;
+  padding: 18px;
+  border-radius: 6px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+
+.submit-form:hover {
+  background: #2b2b2b; 
+}
+
+
+
+@media (max-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+
+  
+  .menu-principal .botones-menu li:not(:last-child) {
+    margin-right: 1em;
+  }
+
+  .parrafo-servicios h2 {
+    font-size: 24px;
+
+}
+
+}
+
+@media (max-width: 992px) {
+
+  .container {
+    width: 750px;
+  }
+
+  .slider h1 {
+    font-size: 38px;
+  }
+
+  
+  .menu-principal > .container {
+    grid-template-areas: "boton logo vacio";
+    grid-template-columns: 1fr 255px 1fr;
+    grid-template-rows: 100%;
+  }
+
+  
+  .menu-principal .botones-menu li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .menu-principal.scroll .botones-menu {
+    top: 72px;
+  }
+
+  .menu-principal .botones-menu a {
+    width: 100%;
+    color: #719b15;
+  }
+
+  .menu-principal .botones-menu {
+    background: #ffffff;
+    width: 190px;
+    position: fixed;
+    top: 126px;
+    left: -100%;
+    transition: all 0.5s ease-in-out;
+  }
+
+  
+  .menu-principal .botones-menu.on {
+    left: 0;
+  }
+
+  .menu-principal.scroll .botones-menu {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.02);
+  }
+
+  .menu-principal .botones-menu ul {
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  .boton-menu-mobile {
+    display: inline;
+  }
+
+  .menu-principal .botones-menu li:not(:last-child) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .menu-principal .botones-menu li {
+    width: calc(100% - 10px);
+    padding-left: 10px;
+    border-bottom: 3px solid #719b15;
+  }
+
+  .menu-principal .botones-menu li a {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .contenido-descripcion {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  section.obras ul {
+    grid-template-columns: 270px;
+    grid-template-rows: repeat(3, auto);
+    justify-content: space-around;
+  }
+
+  .mision-vision .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 80px;
+  }
+
+  .sedes {
+    display: grid;
+    grid-template-areas:
+        "venezuela"
+        "usa" 
+        "spain"
+        "turquia"
+        "rusia";
+  }
+
+}
+
+@media (max-width: 780px) {
+  .container {
+    width: calc(100% - 50px)
+  }
+
+  .titulo-descripcion {
+    font-size: 6vw;
+  }
+
+  .slider h1 {
+    font-size: 32px;
+  }
+
+}
