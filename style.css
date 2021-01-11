@@ -1,47 +1,47 @@
 /* Estilos de fuentes */
 
 @font-face {
-  font-family: "Gotham Black";
-  src: url("fonts/Gotham-Black.otf");
+  font-family: "Montserrat Black";
+  src: url("fonts/Montserrat-Black.ttf");
 }
 
 @font-face {
-  font-family: "Gotham Bold";
-  src: url(fonts/Gotham-Bold.otf);
+  font-family: "Montserrat Bold";
+  src: url(fonts/Montserrat-Bold.ttf);
 }
 
 @font-face {
-  font-family: "Gotham Medium";
-  src: url(fonts/GothamMedium.ttf);
+  font-family: "Montserrat Medium";
+  src: url(fonts/Montserrat-Medium.ttf);
 }
 
 
 @font-face {
-  font-family: "Gotham Regular";
-  src: url(fonts/GothamBook.ttf);
+  font-family: "Montserrat Regular";
+  src: url(fonts/Montserrat-Regular.ttf);
 }
 
 
 
 h1 {
-  font-family: 'Gotham Black';
+  font-family: 'Montserrat Black', sans-serif;
   text-transform: uppercase;
 }
 
 h2 {
-  font-family: 'Gotham Bold';
+  font-family: 'Montserrat Bold', sans-serif;
 }
 
 p, li {
-  font-family: 'Gotham Regular';
+  font-family: 'Montserrat Regular', sans-serif;
 }
 
 strong {
-  font-family: 'Gotham Bold';
+  font-family: 'Montserrat Bold', sans-serif;
 }
 
 a {
-  font-family: 'Gotham Medium';
+  font-family: 'Montserrat Medium', sans-serif;
   text-decoration: none;
 }
 
@@ -66,6 +66,83 @@ section {
 
 html {
   scroll-behavior: smooth;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+
+/* estilos del traductor */
+
+div#google_translate_element {
+  width: 60px;
+  height: 60px;
+  font-size: 38px;
+  position: fixed;
+  bottom: 15px;
+  z-index: 100;
+  right: 15px;
+  border-radius: 50%;
+  text-align: center;
+  font-family: sans-serif;
+  background: #719b15;
+  color: #000000;
+}
+
+div#google_translate_element div.goog-te-gadget-simple {
+  border: none;
+  background-color: transparent;
+  /*background-color: #17548d;*/ /*#e3e3ff*/
+}
+
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value:hover {
+  text-decoration: none;
+}
+
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span {
+  color: #aaa;
+}
+
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span:hover {
+  color: white;
+}
+
+.goog-te-gadget-icon {
+  display: none !important;
+  /*background: url("url for the icon") 0 0 no-repeat !important;*/
+}
+
+/* Remove the down arrow */
+/* when dropdown open */
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="color: rgb(213, 213, 213);"] {
+  display: none;
+}
+/* after clicked/touched */
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="color: rgb(118, 118, 118);"] {
+  display: none;
+}
+/* on page load (not yet touched or clicked) */
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="color: rgb(155, 155, 155);"] {
+  display: none;
+}
+
+/* Remove span with left border line | (next to the arrow) in Chrome & Firefox */
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="border-left: 1px solid rgb(187, 187, 187);"] {
+  display: none;
+}
+/* Remove span with left border line | (next to the arrow) in Edge & IE11 */
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="border-left-color: rgb(187, 187, 187); border-left-width: 1px; border-left-style: solid;"] {
+  display: none;
+}
+/* HIDE the google translate toolbar */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
 }
 
 /* Estilos del menu principal */
@@ -104,12 +181,17 @@ html {
   align-items: center;
 }
 
-.menu-principal .logo-menu img {
-  transition: all 0.5s ease-in-out;
+.menu-principal .logo-menu a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.menu-principal.scroll .logo-menu img {
-  transform: scale(0.6);
+.menu-principal .logo-menu img {
+  height: 70%;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu-principal .botones-menu {
@@ -134,7 +216,7 @@ html {
   text-transform: uppercase;
   padding: 0.5em;
   transition: all 0.5s ease-in-out;
-  font-family: 'Gotham Bold';
+  font-family: 'Montserrat Bold';
 }
 
 .menu-principal.scroll .botones-menu a {
@@ -145,7 +227,7 @@ html {
   display: none;
   color: #ffffff;
   cursor: pointer;
-  font-size: 58px;
+  font-size: 50px;
 }
 
 .menu-principal.scroll .boton-menu-mobile {
@@ -163,6 +245,9 @@ html {
   overflow: hidden;
   position: relative;
   z-index: 0;
+  -webkit-box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
+    -moz-box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
+    box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
 }
 
 .slider > .container-full {
@@ -247,6 +332,12 @@ section.descripcion {
   padding-bottom: 100px;
 }
 
+section.descripcion {
+  -webkit-box-shadow: inset 0px 0px 74px 1px rgba(0,0,0,0.37);
+    -moz-box-shadow: inset 0px 0px 74px 1px rgba(0,0,0,0.37);
+    box-shadow: inset 0px 0px 74px 1px rgba(0,0,0,0.37);
+}
+
 .titulo-descripcion {
   position: relative;
   z-index: 2;
@@ -259,6 +350,7 @@ section.descripcion {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 50px;
+  border-radius: 20px;
   -webkit-box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
   -moz-box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
   box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
@@ -272,21 +364,38 @@ section.descripcion {
   color: #ffffff;
 }
 
+.parrafo-descripcion {
+  height: fit-content;
+  color: #719b15;
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
+    -moz-box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
+    box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
+}
+
 .parrafo-descripcion p {
-  display: flex;
+  font-family: 'Montserrat Medium';
   line-height: 1.15em;
   text-align: center;
-  margin-bottom: 2em;
+  margin: 1.25em;
 }
 
 section.descripcion img {
   width: 100%;
 }
 
+.imagen-descripcion {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .parrafo-servicios {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .parrafo-servicios ul {
@@ -307,7 +416,7 @@ section.descripcion img {
 
 .parrafo-servicios li p {
   display: inline;
-  font-family: 'Gotham Medium';
+  font-family: 'Montserrat Medium';
   line-height: 1.5em;
 }
 
@@ -353,8 +462,22 @@ section.descripcion img {
 /* Estilos de Obras */
 
 section.obras {
-  padding: 100px 0;
+  padding: 100px 0 140px 0;
   background: #e2e2e2;
+  position: relative;
+}
+
+section.obras::after {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  background: url(img/city.svg);
+  background-position: top;
+  background-repeat: no-repeat;
 }
 
 section.obras .container {
@@ -447,10 +570,10 @@ section.obras ul {
   background: #719b15;
 }
 
-/* Estilos de Sedes */
+/* Estilos de Junta */
 
 section.junta {
-  padding: 100px 0
+  padding-top: 100px;
 }
 
 .junta .titulo-junta {
@@ -460,12 +583,42 @@ section.junta {
   text-align: center;
 }
 
-.sedes {
+
+.junta .personas-junta {
+  padding: 1.25em;  
+  border: 3px solid #719b15;
+  border-radius: 10px;
+}
+
+.personas-junta span, .personas-junta strong {
+  color: #719b15;
+}
+
+/* Estilos de Sedes */
+
+section.sedes {
+  padding: 100px 0
+}
+
+.sedes .titulo-sedes {
+  grid-area: titulo;
+  font-size: 44px;
+  color: #719b15;
+  text-align: center;
+}
+
+.sedes .container {
   display: grid;
-  grid-template-areas: "venezuela venezuela"
+  grid-template-areas: "titulo titulo"
+                       "venezuela panama"
                        "usa spain"
                        "turquia rusia";
   grid-gap: 50px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.sede.panama {
+  grid-area: panama;
 }
 
 .sede.venezuela {
@@ -543,6 +696,12 @@ section.junta {
   line-height: 2em;
 }
 
+.sede ul li iframe {
+  width: 100%;
+  margin-bottom: -12px;
+  border-radius: 0 0 10px 10px;
+}
+
 .sede strong {
   color: #719b15;
 }
@@ -572,7 +731,7 @@ section.contacto {
   margin-bottom: 25px;
   background: transparent;
   border: 2px solid #719b15;
-  font-family: 'Gotham Regular', sans-serif;
+  font-family: 'Montserrat Regular', sans-serif;
   font-size: 18px;
 }
 
@@ -583,7 +742,7 @@ textarea {
 
 .submit-form {
   width: 100%;
-  font-family: 'Gotham Bold';
+  font-family: 'Montserrat Bold';
   margin-bottom: 1em;
   color: #ffffff;
   background: #719b15;
@@ -631,10 +790,13 @@ textarea {
     font-size: 38px;
   }
 
+  .menu-principal {
+    height: calc(18px*5);
+  }
   
   .menu-principal > .container {
     grid-template-areas: "boton logo vacio";
-    grid-template-columns: 1fr 255px 1fr;
+    grid-template-columns: 50px 1fr 50px;
     grid-template-rows: 100%;
   }
 
@@ -676,8 +838,9 @@ textarea {
     padding-bottom: 0;
   }
 
-  .boton-menu-mobile {
-    display: inline;
+  .boton-menu-mobile {  
+    display: flex;
+    align-items: center;
   }
 
   .menu-principal .botones-menu li:not(:last-child) {
@@ -715,10 +878,13 @@ textarea {
     grid-gap: 80px;
   }
 
-  .sedes {
+  .sedes .container {
     display: grid;
+    grid-template-columns: 100%;
     grid-template-areas:
+        "titulo"
         "venezuela"
+        "panama"
         "usa" 
         "spain"
         "turquia"
