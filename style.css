@@ -426,6 +426,39 @@ section.descripcion img {
   padding: 100px 0;
 }
 
+.mision-vision .container {
+  display: grid;
+  grid-template-areas: "misionP misionF"
+                       "visionF visionP";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 80px;
+}
+
+.mision {
+  grid-area: misionP;
+}
+
+.mision-foto {
+  grid-area: misionF;
+}
+
+.vision {
+  grid-area: visionP;
+}
+
+.vision-foto {
+  grid-area: visionF;
+}
+
+.mision-foto img {
+  width: 100%;
+}
+
+.vision-foto img {
+  width: 100%;
+}
+
 .mision-vision h2 {
   color: #719b15;
   font-size: 44px;
@@ -452,13 +485,6 @@ section.descripcion img {
 .mision-vision .vision p {
   text-indent: 3em;
 }
-
-.mision-vision .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 80px;
-}
-
 /* Estilos de Obras */
 
 section.obras {
@@ -719,6 +745,13 @@ section.contacto {
   color: #719b15;
 }
 
+.contacto .numeros {
+  font-size: 22px;
+  color: #719b15;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
 .formulario-bienvenidos .importante {
   margin-top: 1em;
   font-size: 14px;
@@ -874,7 +907,11 @@ textarea {
   .mision-vision .container {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "misionP"
+                         "misionF"
+                         "visionP"
+                         "visionF";
     grid-gap: 80px;
   }
 
