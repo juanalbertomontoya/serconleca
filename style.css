@@ -649,9 +649,9 @@ section.sedes {
 .sedes .container {
   display: grid;
   grid-template-areas: "titulo titulo"
-                       "venezuela panama"
-                       "usa spain"
-                       "turquia rusia";
+                       "venezuela venezuela"
+                       "panama usa"
+                       "oficinas oficinas";
   grid-gap: 50px;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -668,16 +668,13 @@ section.sedes {
   grid-area: usa;
 }
 
-.sede.spain {
-  grid-area: spain;
+.sede.oficinas {
+  grid-area: oficinas;
+  text-align: center;
 }
 
-.sede.turquia {
-  grid-area: turquia;
-}
-
-.sede.rusia {
-  grid-area: rusia;
+.sede.oficinas img {
+  width: 50px;
 }
 
 .sede {
@@ -936,9 +933,7 @@ textarea {
         "venezuela"
         "panama"
         "usa" 
-        "spain"
-        "turquia"
-        "rusia";
+        "oficinas";
   }
 
 }
