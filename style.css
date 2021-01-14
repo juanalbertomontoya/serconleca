@@ -255,7 +255,7 @@ body {
   width: 100vw;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(5, 100vw);
+  grid-template-columns: repeat(9, 100vw);
 }
 
 .slider > div > div {
@@ -283,6 +283,37 @@ body {
 
 .conexionado-slider {
   background: url(img/conexionado-pozos.jpg);
+}
+
+.brazos-slider {
+  background: url(img/brazos.jpg);
+}
+
+.lubricacion-slider {
+  background: url(img/lubricacion.jpg);
+}
+
+.armado-slider {
+  background: url(img/armado.jpg);
+}
+
+.valvulas-slider {
+  background: url(img/valvulas.jpg);
+}
+
+
+.brazos-slider .tipos-servicios, .slider .tipos-servicios {
+  list-style: disc inside;
+  color: #ffffff;
+  font-size: 14px;
+  margin-top: 1em;
+  line-height: 1.5em;
+  margin-bottom: 6em;
+  text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
+}
+
+.slider li {
+  font-family: 'Montserrat Bold';
 }
 
 .slider > div > div > .content > .margen-menu {
@@ -836,6 +867,11 @@ textarea {
   .menu-principal {
     height: calc(18px*5);
   }
+
+  .slider > div > div > .content > .margen-menu {
+    width: 100%;
+    height: calc(18px*5);
+  }
   
   .menu-principal > .container {
     grid-template-areas: "boton logo vacio";
@@ -905,7 +941,7 @@ textarea {
 
   .contenido-descripcion {
     grid-template-columns: 100%;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
   }
 
   section.obras ul {
@@ -958,6 +994,10 @@ textarea {
   .slider .container {
     grid-template-columns: 100%;
     grid-template-rows: 80% 20%;
+  }
+
+  .brazos-slider .tipos-servicios, .slider .tipos-servicios {
+    margin-bottom: 1em;
   }
 
 }
